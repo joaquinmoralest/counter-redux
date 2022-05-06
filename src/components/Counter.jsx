@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { incremented } from '../redux/counterSlice'
 import { decremented } from '../redux/counterSlice'
+import { reset } from '../redux/counterSlice'
 import './Counter.css'
 
 function Counter () {
@@ -25,6 +26,13 @@ function Counter () {
             () => dispatch(incremented())}
         >
           Incrementar
+        </button>
+        <button 
+          className='btn btn-danger' 
+          onClick={
+            () => dispatch(reset())}
+        >
+          Resetear
         </button>
       </div>
     </div>
